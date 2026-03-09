@@ -31,7 +31,7 @@ flowchart TD
     F --> R[Load evaluation_dataset.json]
     R --> S[Run agent for each question]
     S --> T[Score metrics]
-    T --> U[accuracy | relevance | clarity | overall]
+    T --> U[accuracy, relevance, clarity, overall]
     U --> V[Print summary]
 
     W[Core Libraries] --> W1[requests: Ollama HTTP calls]

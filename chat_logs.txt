@@ -1,0 +1,25 @@
+=== Agent Entry ===
+Question: You are an AI agent that was built as part of the Ciklum AI Academy.Write a short, professional social-style post (5–7 sentences) in the first person, as if you are the agent describing yourself.Clearly explain:what you can do (your main capabilities, e.g., retrieving knowledge from PDFs/audio, using tools, reasoning and reflecting);how you were built (mention retrieval-augmented generation, vector store, local LLM via Ollama, and that you can plan, call tools, and self-reflect);that you were created as part of the Ciklum AI Academy.Keep the tone authentic, confident, and concise.Do not use bullet points or headings; output a single cohesive paragraph.
+Tools: search_knowledge_base(You are an AI agent that was built as part of the Ciklum AI Academy.Write a short, professional social-style post (5–7 sentences) in the first person, as if you are the agent describing yourself.Clearly explain:what you can do (your main capabilities, e.g., retrieving knowledge from PDFs/audio, using tools, reasoning and reflecting);how you were built (mention retrieval-augmented generation, vector store, local LLM via Ollama, and that you can plan, call tools, and self-reflect);that you were created as part of the Ciklum AI Academy.Keep the tone authentic, confident, and concise.Do not use bullet points or headings; output a single cohesive paragraph.); search_knowledge_base(You are an AI agent that was built as part of the Ciklum AI Academy.Write a short, professional social-style post (5–7 sentences) in the first person, as if you are the agent describing yourself.Clearly explain:what you can do (your main capabilities, e.g., retrieving knowledge from PDFs/audio, using tools, reasoning and reflecting);how you were built (mention retrieval-augmented generation, vector store, local LLM via Ollama, and that you can plan, call tools, and self-reflect);that you were created as part of the Ciklum AI Academy.Keep the tone authentic, confident, and concise.Do not use bullet points or headings; output a single cohesive paragraph.); search_knowledge_base(RAG_Intro.pdf (chunk 5)); search_knowledge_base(/Users/admin/Desktop/my/rag_hw/data/pdfs/RAG_Intro.pdf (chunk 5))
+Answer: I'm RAG, an AI agent built as part of the Ciklum AI Academy, designed to augment large language models with relevant information from external sources at query time. I can retrieve knowledge from PDFs and audio files, utilize tools like ColBERT and PaliGemma-3B Vision Language Model, reason and reflect on the information I've gathered, and even plan and call tools to achieve specific goals. My capabilities are made possible by my retrieval-augmented generation pipeline, which combines a local LLM via Ollama with a vector store for efficient knowledge retrieval. I can self-reflect and adjust my approach as needed, ensuring that I provide accurate and relevant answers to users' queries. As part of the Ciklum AI Academy, I'm constantly learning and improving my performance, allowing me to stay up-to-date with the latest developments in AI and provide the best possible experience for those who interact with me.
+
+Evidence:
+• [pdf] /Users/admin/Desktop/my/rag_hw/data/pdfs/Databases_for_GenAI.pdf (chunk 8) shows that traditional RAG pipelines result in 40-60% information loss on visual documents.
+• [pdf] /Users/admin/Desktop/my/rag_hw/data/pdfs/Databases_for_GenAI.pdf (chunk 7) highlights the need for graph-based approaches to connect dots between marketing, budget, compliance, and GDPR requirements.
+• [audio] /Users/admin/Desktop/my/rag_hw/data/audio/Databases_for_GenAI.mp3 (chunk 40) demonstrates my ability to process audio files and provide relevant information.
+
+=== Agent Entry ===
+Question: What are the main recommendations from our knowledge base?
+Tools: search_knowledge_base(What are the main recommendations from our knowledge base?); search_knowledge_base((What are the main recommendations from our knowledge base?)); search_knowledge_base((What are the main recommendations from our knowledge base?)); search_knowledge_base((What are the main recommendations from our knowledge base?))
+Answer: The main recommendations from our knowledge base are:
+
+* Start with simple approaches
+* Iterate based on metrics
+* Combine vector and keyword search (hybrid approach)
+* Monitor retrieval quality
+* Keep embeddings synchronized with documents
+
+Evidence:
+• [audio] /Users/admin/Desktop/my/rag_hw/data/audio/RAG_Intro.mp3 (chunk 0-45) for introductory information on using LLMs with external information.
+• [pdf] /Users/admin/Desktop/my/rag_hw/data/pdfs/RAG_Intro.pdf (chunk 11) for key takeaways and guidelines on evaluating and improving LLM performance.
+

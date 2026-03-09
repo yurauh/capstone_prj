@@ -1,0 +1,10 @@
+[
+  {
+    "question": "What is the main topic in my knowledge base?",
+    "expected_answer": "A concise summary grounded in the uploaded PDFs and audio transcripts."
+  },
+  {
+    "question": "List two key points with sources.",
+    "expected_answer": "Two factual points and source references from the retrieved context chunks."
+  }
+]

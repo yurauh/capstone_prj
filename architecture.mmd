@@ -1,0 +1,47 @@
+flowchart TD
+    A[User] --> B[CLI Entry: agentic_rag.py]
+    B --> C{Mode}
+    C -->|build_index| D[Ingest Data]
+    C -->|chat| E[Run Agentic Loop]
+    C -->|evaluate| F[Run Batch Evaluation]
+
+    D --> D1[data/pdfs -> pypdf]
+    D --> D2[data/audio -> Whisper]
+    D1 --> D3[Chunk Text]
+    D2 --> D3[Chunk Text]
+    D3 --> D4[Hugging Face Embeddings API]
+    D4 --> D5[ChromaDB Persistent Vector Store]
+
+    E --> G[Planner via Ollama]
+    G --> H{Select Tool}
+    H -->|search_knowledge_base| I[Query ChromaDB]
+    H -->|inspect_project_file| J[Read local file preview]
+    H -->|inspect_chat_logs| K[Read chat_logs.txt]
+    H -->|finish| L[Stop planning]
+    I --> M[Reflection via Ollama]
+    J --> M
+    K --> M
+    M --> N{Evidence sufficient?}
+    N -->|No| G
+    N -->|Yes| O[Grounded Answer Generation via Ollama]
+    L --> O
+    O --> P[Append Agent Log]
+    P --> Q[Return final answer]
+
+    F --> R[Load evaluation_dataset.json]
+    R --> S[Run agent for each question]
+    S --> T[Score metrics]
+    T --> U[accuracy | relevance | clarity | overall]
+    U --> V[Print summary]
+
+    W[Core Libraries] --> W1[requests: Ollama HTTP calls]
+    W --> W2[chromaDB: vector database]
+    W --> W3[huggingface_hub: embeddings]
+    W --> W4[pypdf: PDF extraction]
+    W --> W5[openai-whisper: audio transcription]
+    W --> W6[python-dotenv: environment loading]
+    W --> W7[tqdm: ingestion progress]
+
+    X[How to run] --> X1[python agentic_rag.py --mode build_index]
+    X --> X2[python agentic_rag.py --mode chat]
+    X --> X3[python agentic_rag.py --mode evaluate --eval-file evaluation_dataset.json]
